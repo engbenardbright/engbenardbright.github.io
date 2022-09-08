@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NLP Comments Visualization</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+          
+             body {font-family: 'Roboto', sans-serif;}
+        </style>
+
+        <!-- CDN -->
+        <script src="https://kit.fontawesome.com/d52256011e.js" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/release/v5.10.0/css/all.css"> -->
+        <!-- Above is the original CDN Below is new test CDN -->
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>       
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    
+    <body>
+        <script>
+            d3.csv("Comments.csv", function(data){
+                var canvas = d3.select ("body").append("svg")
+                    .attr("width", 500)
+                    .attr("height", 500)
+
+                canvas.selectAll("rect")
+                    .data(data)
+                    .enter()
+                        .append("rect")
+                        .append
+            })
+        </script>
+        <script type="text/javascript" src="comments.js"></script>
+
+        <section id="menu">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <h2>Data Analytica</h2>
+            </div>
+            
+            <!-- original div for sidebar -->
+            <div class="items">
+                <li><i class="fad fa-chart-pie-alt"></i><a href="#">Dashboard</a></li>
+                <li><i class="fab fa-uikit"></i><a href="piechart.html">Pie Chart</a></li>
+                <li><i class="fas fa-th-large"></i><a href="wordcloud.html">Word Cloud</a></li>
+                <li><i class="fab fa-cc-visa"></i><a href="barchart.html">Bar Chart</a></li>
+            </div>
+        </section>
+
+        <section id="interface">
+            <div class="navigation">
+                <div class="n1">
+                    <div>
+                        <i id="menu-btn" class="fas fa-bars"></i>
+                    </div>
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="images/kedrina.png" alt="">
+                </div>
+            </div>
+            <h3 class="i-name">
+                Dashboard
+            </h3>
+
+            <div class="values">
+                <div class="val-box">
+                    <i class="fab fa-servicestack"></i>
+                    <div>
+                        <h3>4110 X 2</h3>
+                        <span>Shape</span>
+                    </div>
+                </div>
+                <div class="val-box">
+                    <i class="fad fa-question"></i>
+                    <div>
+                        <h3>0.640519</h3>
+                        <span>Max Silhoutte Value</span>
+                    </div>
+                </div>
+                <div class="val-box">
+                    <i class="fal fa-window-restore"></i>
+                    <div>
+                        <h3>0.5795</h3>
+                        <span>Best Silhoutte Value</span>
+                    </div>
+                </div>
+                <div class="val-box">
+                    <i class="fab fa-500px"></i>
+                    <div>
+                        <h3>5</h3>
+                        <span>n_clusters</span>
+                    </div>
+                </div>
+            </div>
+
+            <dir class="board">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Title</td>
+                            <td>Status</td>
+                            <td>Roles</td>
+                            <td></td>
+                           </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="people">
+                                <img src="images/Dr. Ntanda.png" alt="">
+                                <div class="people-de">
+                                    <h5>Dr. Moses Ntanda</h5>
+                                    <p>m.ntanda@gmail.com</p>
+                                </div>
+                            </td>
+
+                            <td class="people-de">
+                                <h5>Lecturer</h5>
+                                <p>Data Analytics and viz</p>
+                            </td>
+
+                            <td class="active"><p>active</p></td>
+
+                            <td class="role">
+                                <p>Teacher</p>
+                            </td>
+
+                            <td class="edit"><a href="#">Edit</a></td>
+                        
+                        </tr>
+                        <tr>
+                            <td class="people">
+                                <img src="images/ben.png" alt="">
+                                <div class="people-de">
+                                    <h5>Bright Benard</h5>
+                                    <p>engbenard123@gmail.com</p>
+                                </div>
+                            </td>
+
+                            <td class="people-de">
+                                <h5>Computer Scientist</h5>
+                                <p>Data Analytics and Viz</p>
+                            </td>
+
+                            <td class="active"><p>active</p></td>
+
+                            <td class="role">
+                                <p>Owner</p>
+                            </td>
+
+                            <td class="edit"><a href="#">Edit</a></td>
+                        
+                        </tr>
+                        <tr>
+                            <td class="people">
+                                <img src="images/Joshua.png" alt="">
+                                <div class="people-de">
+                                    <h5>Muhumuza Joshua</h5>
+                                    <p>joshmuhumuza@gmail.com</p>
+                                </div>
+                            </td>
+
+                            <td class="people-de">
+                                <h5>Computer Scientist</h5>
+                                <p>Data Analytics and Viz</p>
+                            </td>
+
+                            <td class="active"><p>active</p></td>
+
+                            <td class="role">
+                                <p>Reviewer</p>
+                            </td>
+
+                            <td class="edit"><a href="#">Edit</a></td>
+                        
+                        </tr>
+                        <tr>
+                            <td class="people">
+                                <img src="images/priva.png" alt="">
+                                <div class="people-de">
+                                    <h5>Ashaba Priva</h5>
+                                    <p>privanamubiru@gmail.com</p>
+                                </div>
+                            </td>
+
+                            <td class="people-de">
+                                <h5>Legal </h5>
+                                <p>Legal</p>
+                            </td>
+
+                            <td class="active"><p>active</p></td>
+
+                            <td class="role">
+                                <p>Legal Counsel</p>
+                            </td>
+
+                            <td class="edit"><a href="#">Edit</a></td>
+                        
+                        </tr>
+                    </tbody>
+                </table>
+            </dir>
+        </section>
+
+        <script>
+            $('#menu-btn').click(function() {
+                $('menu').toggleClass("active");
+            })
+        </script>
+
+    </body>
+</html>
+

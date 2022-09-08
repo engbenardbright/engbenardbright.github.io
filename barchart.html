@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+ 
+    var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light1", // "light2", "dark1", "dark2"
+        animationEnabled: false, // change to true		
+        title:{
+            text: "Cluster Scatter Plot"
+        },
+        data: [
+        {
+            // Change type to "bar", "area", "spline", "pie",etc.
+            type: "scatter",
+            dataPoints: [
+                { label: -8,  y: 10  },
+                { label: -4, y: 15  },
+                { label: -3, y: 25  },
+                { label: 1,  y: 28  },
+                { label: 4,  y: 30  }
+            ]
+        }
+        ]
+    });
+    chart.render();
+     
+    }
+
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

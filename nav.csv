@@ -1,0 +1,9 @@
+<!-- Update our navigation CSV with new page and include navigation script in index.html
+Get and include WordCloud script
+Read in data file and convert data to word cloud format
+Feed data to Word Cloud and tweak scale, padding, and other attributes -->
+code, href, label
+index,/index.html, DPTBA
+02,/02-creating-a-table/,Router
+03,/03-creating-charts/,Results
+04,/04-tempora-comparisons/,Standings

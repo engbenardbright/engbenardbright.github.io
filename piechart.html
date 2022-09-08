@@ -1,0 +1,35 @@
+<!-- PIE CHART -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Pie Chart"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		indexLabel: "{label} {y}",
+		dataPoints: [
+            {y: 400, label: "Very Poor"},
+            {y: 110, label: "Poor"},
+            {y: 500, label: "Good"},
+            {y: 1000, label: "Very Good"},
+			{y: 2000, label: "Excellent"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    /* center content */
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* grid */
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+
+/* base font color for all words */
+body > div {
+    color: #0c0c01;
+    height: 100px;
+    width: 300px;
+}
+/* twice the size, bold and different color for each second word */
+body :nth-child(2n) {
+    font-size: 4rem;
+    color: #1317e7;
+    font-weight: bold;
+}
+/* vertical orientation and different color for each third word */
+body :nth-child(3n) {
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    color: #13aa13;
+}
+
+/* triple size and different color for each fourth word */
+body :nth-child(4n) {
+    font-size: 8rem;
+    color: #0e0303;
+}
+/* quadruple size and different color for each fifth word */
+body :nth-child(5n) {
+    font-size: 5rem;
+    color: #f11708;
+}
+
+#Programming {
+    grid-area: Programming;
+}
+#Algorithm {
+    grid-area: Algorithm;
+}
+#Software {
+    grid-area: Software;
+}
+#Documentation {
+    grid-area: Documentation;
+}
+#Coding {
+    grid-area: Coding;
+}
+#Information {
+    grid-area: Information;
+}
+#Testing {
+    grid-area: Testing;
+}
+#Computer {
+    grid-area: Computer;
+}
+#Debugging {
+    grid-area: Debugging;
+}
+#Design {
+    grid-area: now;
+}
+#Readability {
+    grid-area: Readability;
+}
+#Learning {
+    grid-area: Learning;
+}
+
